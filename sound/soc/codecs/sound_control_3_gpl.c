@@ -149,7 +149,6 @@ int snd_hax_reg_access(unsigned int reg)
 			if (snd_ctrl_locked > 1)
 				ret = 0;
 			break;
-<<<<<<< HEAD
 		case TAIKO_A_CDC_RX1_VOL_CTL_B2_CTL:
 		case TAIKO_A_CDC_RX2_VOL_CTL_B2_CTL:
 		case TAIKO_A_CDC_RX3_VOL_CTL_B2_CTL:
@@ -157,7 +156,6 @@ int snd_hax_reg_access(unsigned int reg)
 		case TAIKO_A_CDC_RX5_VOL_CTL_B2_CTL:
 		case TAIKO_A_CDC_RX6_VOL_CTL_B2_CTL:
 		case TAIKO_A_CDC_RX7_VOL_CTL_B2_CTL:
-=======
 		case TABLA_A_CDC_RX1_VOL_CTL_B2_CTL:
 		case TABLA_A_CDC_RX2_VOL_CTL_B2_CTL:
 		case TABLA_A_CDC_RX3_VOL_CTL_B2_CTL:
@@ -169,7 +167,6 @@ int snd_hax_reg_access(unsigned int reg)
 		case TABLA_A_RX_LINE_2_GAIN:
 		case TABLA_A_RX_LINE_3_GAIN:
 		case TABLA_A_RX_LINE_4_GAIN:
->>>>>>> 6d148e5... update Faux Sound to v3.6
 			if (snd_ctrl_locked > 0)
 				ret = 0;
 			break;
@@ -233,13 +230,10 @@ static ssize_t mic_gain_show(struct kobject *kobj,
 		struct kobj_attribute *attr, char *buf)
 {
 	return sprintf(buf, "%u\n",
-<<<<<<< HEAD
 		taiko_read(fauxsound_codec_ptr,
 			TAIKO_A_CDC_TX7_VOL_CTL_GAIN));
-=======
 		tabla_read(fauxsound_codec_ptr,
 			TABLA_A_CDC_TX7_VOL_CTL_GAIN));
->>>>>>> 6d148e5... update Faux Sound to v3.6
 }
 
 static ssize_t mic_gain_store(struct kobject *kobj,
@@ -250,13 +244,10 @@ static ssize_t mic_gain_store(struct kobject *kobj,
 	sscanf(buf, "%u %u", &lval, &chksum);
 
 	if (calc_checksum(lval, 0, chksum)) {
-<<<<<<< HEAD
 		taiko_write(fauxsound_codec_ptr,
 			TAIKO_A_CDC_TX7_VOL_CTL_GAIN, lval);
-=======
 		tabla_write(fauxsound_codec_ptr,
 			TABLA_A_CDC_TX7_VOL_CTL_GAIN, lval);
->>>>>>> 6d148e5... update Faux Sound to v3.6
 	}
 	return count;
 
@@ -432,11 +423,7 @@ static ssize_t sound_control_rec_locked_store(struct kobject *kobj,
 static ssize_t sound_control_rec_locked_show(struct kobject *kobj,
 		struct kobj_attribute *attr, char *buf)
 {
-<<<<<<< HEAD
         return sprintf(buf, "%d\n", snd_rec_ctrl_locked);
-=======
-	return sprintf(buf, "%d\n", snd_rec_ctrl_locked);
->>>>>>> 6d148e5... update Faux Sound to v3.6
 }
 
 static struct kobj_attribute sound_reg_sel_attribute =
