@@ -42,8 +42,6 @@
 #include <asm/div64.h>
 #endif
 
-<<<<<<< HEAD
-=======
 #ifdef CONFIG_CPU_VOLTAGE_TABLE
 static struct cpufreq_frequency_table *dts_freq_table;
 #endif
@@ -60,7 +58,6 @@ struct cpu_freq {
 static DEFINE_PER_CPU(struct cpu_freq, cpu_freq_info);
 #endif
 
->>>>>>> 1bea85a... Voltage Control: generic voltage control for DTS based kernels
 static DEFINE_MUTEX(l2bw_lock);
 
 static struct clk *cpu_clk[NR_CPUS];
@@ -614,8 +611,6 @@ static int cpufreq_parse_dt(struct device *dev)
 	freq_table[i].index = i;
 	freq_table[i].frequency = CPUFREQ_TABLE_END;
 
-<<<<<<< HEAD
-=======
 #ifdef CONFIG_CPU_VOLTAGE_TABLE
 	dts_freq_table =
 		devm_kzalloc(dev, (nf + 1) *
@@ -632,7 +627,6 @@ static int cpufreq_parse_dt(struct device *dev)
 
 	if (ports)
 		devm_kfree(dev, ports);
->>>>>>> 1bea85a... Voltage Control: generic voltage control for DTS based kernels
 	devm_kfree(dev, data);
 
 	return 0;

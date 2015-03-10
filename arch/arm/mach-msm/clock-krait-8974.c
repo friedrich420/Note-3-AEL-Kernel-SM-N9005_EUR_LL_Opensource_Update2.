@@ -599,12 +599,10 @@ static void krait_update_uv(int *uv, int num, int boost_uv)
 	}
 }
 
-<<<<<<< HEAD
 static char table_name[] = "qcom,speedXX-pvsXX-bin-vXX";
 module_param_string(table_name, table_name, sizeof(table_name), S_IRUGO);
 static unsigned int pvs_config_ver;
 module_param(pvs_config_ver, uint, S_IRUGO);
-=======
 #ifdef CONFIG_CPU_VOLTAGE_TABLE
 
 #define CPU_VDD_MIN	 600
@@ -676,7 +674,6 @@ ssize_t store_UV_mV_table(struct cpufreq_policy *policy, char *buf,
 	return ret;
 }
 #endif
->>>>>>> 1bea85a... Voltage Control: generic voltage control for DTS based kernels
 
 static int clock_krait_8974_driver_probe(struct platform_device *pdev)
 {
