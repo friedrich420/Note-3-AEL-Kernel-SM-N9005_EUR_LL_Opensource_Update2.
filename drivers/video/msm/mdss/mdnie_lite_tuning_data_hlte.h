@@ -21,7 +21,6 @@
 
 ////////////////// UI /// /////////////////////
 
-<<<<<<< HEAD
 static char SCREEN_CURTAIN_1[] = {
 	//start
 	0xEB,
@@ -74,7 +73,6 @@ static char SCREEN_CURTAIN_2[] = {
 	0x00, //scr Kg Kg
 	0x00, //scr Wb Wr
 	0x00, //scr Kb Kr
-=======
 #if defined(CONFIG_MDNIE_LITE_CONTROL)
 char LITE_CONTROL_1[] = {
 	0xEB,
@@ -127,7 +125,6 @@ char LITE_CONTROL_2[] = {
 	0x00, //39 = black_green
 	0xff, //40 = white_blue
 	0x00, //41 = black_blue
->>>>>>> c005078... mdnie: HIJACK MDNIE Profile v1.0a (Yank555.lu)
 	0x00, //curve 1 b
 	0x20, //curve 1 a
 	0x00, //curve 2 b
@@ -142,11 +139,8 @@ char LITE_CONTROL_2[] = {
 	0x1b, //curve 6 a
 	0x02, //curve 7 b
 	0x1b, //curve 7 a
-<<<<<<< HEAD
 	0x02, //curve 8 b
-=======
 	0x01, //curve 8 b
->>>>>>> c005078... mdnie: HIJACK MDNIE Profile v1.0a (Yank555.lu)
 	0x1b, //curve 8 a
 	0x09, //curve 9 b
 	0xa6, //curve 9 a
@@ -180,7 +174,6 @@ char LITE_CONTROL_2[] = {
 	0x20, //curve23 a
 	0x00, //curve24 b
 	0xFF, //curve24 a
-<<<<<<< HEAD
 	0x04, //cc r1
 	0x00,
 	0x00, //cc r2
@@ -201,7 +194,6 @@ char LITE_CONTROL_2[] = {
 	0x00,
 	//end
 };
-=======
 	0x04, //cc r1 0.08x
 	0x39,
 	0x1f, //cc r2
@@ -222,7 +214,6 @@ char LITE_CONTROL_2[] = {
 	0x48,
 };
 #endif
->>>>>>> c005078... mdnie: HIJACK MDNIE Profile v1.0a (Yank555.lu)
 
 static char STANDARD_UI_1[] = {
 	0xEB,

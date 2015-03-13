@@ -187,16 +187,13 @@ char scenario_name[MAX_mDNIe_MODE][16] = {
 
 const char background_name[MAX_BACKGROUND_MODE][10] = {
 	"DYNAMIC",
-<<<<<<< HEAD
 #ifndef	MDNIE_LITE_MODE
 	"STANDARD",
-=======
 #if defined(CONFIG_MDNIE_LITE_CONTROL)
 	"CONTROL",
 #else
 	"STANDARD",
 #endif
->>>>>>> c005078... mdnie: HIJACK MDNIE Profile v1.0a (Yank555.lu)
 #if !defined(CONFIG_SUPPORT_DISPLAY_OCTA_TFT)
 	"NATURAL",
 #endif
@@ -1731,7 +1728,6 @@ static DEVICE_ATTR(accessibility, 0664,
 			accessibility_show,
 			accessibility_store);
 
-<<<<<<< HEAD
 #if defined(CONFIG_FB_MSM_MIPI_SAMSUNG_OCTA_CMD_WQHD_PT_PANEL)
 static ssize_t sensorRGB_show(struct device *dev,
 		struct device_attribute *attr, char *buf)
@@ -1959,7 +1955,6 @@ static DEVICE_ATTR(tuning, S_IRUGO | S_IWUSR | S_IWGRP,
 
 #endif /* DDI_VIDEO_ENHANCE_TUNING */
 #endif /* CONFIG_FB_MSM_MDSS_MDP3 */
-=======
 /* -------------------------------------------------------
  * Add whathub's new interface
  * 
@@ -2185,7 +2180,6 @@ static DEVICE_ATTR(control_white, 0664, white_show, white_store);
 static DEVICE_ATTR(control_black, 0664, black_show, black_store);
 static DEVICE_ATTR(control_version, 0444, version_show, NULL);
 #endif
->>>>>>> c005078... mdnie: HIJACK MDNIE Profile v1.0a (Yank555.lu)
 
 static struct class *mdnie_class;
 struct device *tune_mdnie_dev;
@@ -2252,7 +2246,6 @@ void init_mdnie_class(void)
 		pr_err("Failed to create device file(%s)!=n",
 			dev_attr_accessibility.attr.name);
 
-<<<<<<< HEAD
 #if defined(CONFIG_FB_MSM_MIPI_SAMSUNG_OCTA_CMD_WQHD_PT_PANEL)
 	if (device_create_file
 		(tune_mdnie_dev, &dev_attr_sensorRGB) < 0)
@@ -2267,7 +2260,6 @@ void init_mdnie_class(void)
 		pr_err("Failed to create device file(%s)!=n",
 			dev_attr_tuning.attr.name);
 #endif
-=======
 #if defined(CONFIG_MDNIE_LITE_CONTROL)
 	device_create_file(tune_mdnie_dev, &dev_attr_hijack);
 	device_create_file(tune_mdnie_dev, &dev_attr_curve);
@@ -2316,7 +2308,6 @@ void init_mdnie_class(void)
 	device_create_file(tune_mdnie_dev, &dev_attr_control_white);
 	device_create_file(tune_mdnie_dev, &dev_attr_control_black);
 	device_create_file(tune_mdnie_dev, &dev_attr_control_version);
->>>>>>> c005078... mdnie: HIJACK MDNIE Profile v1.0a (Yank555.lu)
 #endif
 
 	mdnie_tun_state.mdnie_enable = true;
@@ -2573,11 +2564,8 @@ void coordinate_tunning(int x, int y)
 	memcpy(&AUTO_VT_2[scr_wr_addr], &coordinate_data[tune_number][0], coordinate_data_size);
 
 	memcpy(&CAMERA_2[scr_wr_addr], &coordinate_data[tune_number][0], coordinate_data_size);
-<<<<<<< HEAD
 #endif
 
-=======
->>>>>>> c005078... mdnie: HIJACK MDNIE Profile v1.0a (Yank555.lu)
 }
 #endif /* COORDINATE_DATA_NONE */
 
