@@ -187,20 +187,17 @@ char scenario_name[MAX_mDNIe_MODE][16] = {
 
 const char background_name[MAX_BACKGROUND_MODE][10] = {
 	"DYNAMIC",
-#ifndef	MDNIE_LITE_MODE
-	"STANDARD",
 #if defined(CONFIG_MDNIE_LITE_CONTROL)
 	"CONTROL",
 #else
-	"STANDARD",
+ 	"STANDARD",
 #endif
 #if !defined(CONFIG_SUPPORT_DISPLAY_OCTA_TFT)
-	"NATURAL",
+ 	"NATURAL",
 #endif
-	"MOVIE",
-	"AUTO",
-#endif /* MDNIE_LITE_MODE */
-};
+ 	"MOVIE",
+ 	"AUTO",
+ };
 
 const char outdoor_name[MAX_OUTDOOR_MODE][20] = {
 	"OUTDOOR_OFF_MODE",
@@ -2259,6 +2256,7 @@ void init_mdnie_class(void)
 		(tune_mdnie_dev, &dev_attr_tuning) < 0)
 		pr_err("Failed to create device file(%s)!=n",
 			dev_attr_tuning.attr.name);
+#endif
 #endif
 #if defined(CONFIG_MDNIE_LITE_CONTROL)
 	device_create_file(tune_mdnie_dev, &dev_attr_hijack);
