@@ -625,8 +625,8 @@ static int cpufreq_parse_dt(struct device *dev)
 	dts_freq_table[i].frequency = CPUFREQ_TABLE_END;
 #endif
 
-	if (ports)
-		devm_kfree(dev, ports);
+	//if (ports)
+		//devm_kfree(dev, ports);
 	devm_kfree(dev, data);
 
 	return 0;
