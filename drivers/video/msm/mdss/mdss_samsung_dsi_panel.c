@@ -2557,6 +2557,7 @@ static int mipi_samsung_disp_send_cmd(
 				goto unknown_command;
 			}
 			break;
+			udelay(300);
 		case PANEL_MTP_ENABLE:
 			cmd_desc = nv_enable_cmds.cmd_desc;
 			cmd_size = nv_enable_cmds.num_of_cmds;
