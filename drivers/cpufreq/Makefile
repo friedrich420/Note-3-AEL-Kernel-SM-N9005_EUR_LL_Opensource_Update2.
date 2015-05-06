@@ -35,6 +35,13 @@ obj-$(CONFIG_CPU_FREQ_GOV_YANKACTIVE)	+= cpufreq_yankactive.o
 //obj-$(CONFIG_CPU_FREQ_GOV_ELEMENTALX)	+= cpufreq_elementalx.o
 //obj-$(CONFIG_CPU_FREQ_GOV_ZZMOOVE)	+= cpufreq_zzmoove.o
 //obj-$(CONFIG_CPU_FREQ_GOV_LULZACTIVEQ) += cpufreq_lulzactiveq.o
+obj-$(CONFIG_CPU_FREQ_GOV_IMPULSE)	+= cpufreq_impulse.o
+obj-$(CONFIG_CPU_FREQ_GOV_OPTIMAX) 		+= cpufreq_optimax.o
+obj-$(CONFIG_CPU_FREQ_GOV_PRESERVATIVE)	+= cpufreq_preservative.o
+obj-$(CONFIG_CPU_FREQ_GOV_MYTHX_PLUG)	+= cpufreq_mythx_plug.o
+obj-$(CONFIG_CPU_FREQ_GOV_BARRY_ALLEN)	+= cpufreq_barry_allen.o
+obj-$(CONFIG_CPU_FREQ_GOV_HYPER)	+= cpufreq_hyper.o
+obj-$(CONFIG_CPU_FREQ_GOV_BLU_ACTIVE)	+= cpufreq_blu_active.o
 
 # CPUfreq cross-arch helpers
 obj-$(CONFIG_CPU_FREQ_TABLE)		+= freq_table.o

@@ -526,7 +526,27 @@ extern struct cpufreq_governor cpufreq_gov_zzmove;
 elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_LULZACTIVEQ)
 extern struct cpufreq_governor cpufreq_gov_lulzactiveq;
 #define CPUFREQ_DEFAULT_GOVERNOR	(&cpufreq_gov_lulzactiveq)
-
+#elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_IMPULSE)
+extern struct cpufreq_governor cpufreq_gov_impulse;
+#define CPUFREQ_DEFAULT_GOVERNOR	(&cpufreq_gov_impulse)
+#elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_OPTIMAX)
+extern struct cpufreq_governor cpufreq_gov_optimax;
+#define CPUFREQ_DEFAULT_GOVERNOR	(&cpufreq_gov_optimax)
+#elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_PRESERVATIVE)
+extern struct cpufreq_governor cpufreq_gov_preservative;
+#define CPUFREQ_DEFAULT_GOVERNOR	(&cpufreq_gov_preservative)
+#elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_BLU_ACTIVE)
+extern struct cpufreq_governor cpufreq_gov_blu_active;
+#define CPUFREQ_DEFAULT_GOVERNOR	(&cpufreq_gov_blu_active)
+#elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_MYTHX_PLUG)
+extern struct cpufreq_governor cpufreq_gov_myhtx_plug;
+#define CPUFREQ_DEFAULT_GOVERNOR	(&cpufreq_gov_myhtx_plug)
+#elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_BARRY_ALLEN)
+extern struct cpufreq_governor cpufreq_gov_barry_allen;
+#define CPUFREQ_DEFAULT_GOVERNOR	(&cpufreq_gov_barry_allen)
+#elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_HYPER)
+extern struct cpufreq_governor cpufreq_gov_hyper;
+#define CPUFREQ_DEFAULT_GOVERNOR	(&cpufreq_gov_hyper)
 #endif
 
 /*********************************************************************
